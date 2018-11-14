@@ -240,6 +240,7 @@ margin: 0;
  `
 
 const BenefitsParagraph = styled.p`
+margin: 18px;
 text-align: center;
 font-family: "Poppins";
 font-weight: 400;
