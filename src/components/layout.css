@@ -159,7 +159,9 @@ p{
 @media  (max-width: 736px) {
 
   
-
+.Hero {
+    height: 1400px;
+}
     
 .HeroGroup {
     padding: 150px 40px;
@@ -466,6 +468,11 @@ textarea {
         font-size: 19px;
     }
 }
+
+/* samsung phone */
+
+
+
 
 
 
