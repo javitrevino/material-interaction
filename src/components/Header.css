@@ -21,10 +21,11 @@
 }
 
 .Header a {
-    color: white;
+     color: white;
     font-weight: 500;
-    font-size: 21px;
-cursor: pointer;
+    font-size: 22px;
+    cursor: pointer;
+
 }
 
 .Logo {

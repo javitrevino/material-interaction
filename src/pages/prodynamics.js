@@ -4,13 +4,13 @@ import Layout from '../components/layout'
 import Card from '../components/Card'
 import Section from '../components/Section';
 import Link from 'gatsby-link'
-
+import Wave from '../components/Wave'
 
 
 const ScreensGroup = styled.div`
     display: grid;
-    grid-gap: 40px;
-    grid-template-columns: 710px 710px;
+    grid-gap: 80px;
+    grid-template-columns: 1fr;
  justify-items: center;
 
     justify-content: center;
@@ -20,6 +20,10 @@ const ScreensGroup = styled.div`
         grid-template-columns: 1fr;
 
     }
+
+    /* ----------- iPhone X ----------- */
+
+
 
 `
 
@@ -38,6 +42,8 @@ const MicroGroup = styled.div`
 `
 
 const ViewPrototype = styled.div`
+text-align: center;
+
     display grid;
       justify-content: center;	
       justify-items: center;
@@ -122,19 +128,18 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 const ProdynamicsPage = ({ data }) => (
     <Layout>
-        <div className="HeroProject">
-            <div className="HeroAltGroup">
-                <h1>Prodynamics</h1>
-                <h2>Retail Android Experience</h2>
-                <p>
-                  El objetivo de esta app de es ser utilizada por el personal 
+        <div className="Hero">
+            <div className="HeroGroup">
+                <h1 className="HeroTitle">Prodynamics</h1>
+                <h2 className="HeroSubtitle">Retail Android Experience</h2>
+                <p className="HeroParagraph">
+                  El objetivo de esta app de ser usada por el personal 
                   de Prodynamics en sus tiendas para buscar en el catálogo, procesar compras, 
-                   y hacer encuestas. La visión que se 
-                   tuvo fue la de crear una experiencia contexual tomando en cuenta que
-                    se utilizarían tabletas Android en los locales trabajamos con cierta  consideración de Material Design de Google.
+                   y hacer encuestas. La visión fue dede crear una experiencia retail conextual para tablets,  con consideración de Material Design de Google.
   
            </p>
             </div>
+            <Wave />
 
         </div >
         <GroupHeader>

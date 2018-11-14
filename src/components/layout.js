@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
-
 import Header from './header'
 import './layout.css'
-
 import Footer from '../components/Footer'
+import icon32 from '../images/interaction_favicon.png'
+
+
+
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -44,6 +45,9 @@ const Layout = ({ children }) => (
               name: 'keywords', content:
                 data.site.siteMetadata.keywords
             }
+          ]}
+          link={[
+            { rel: 'shortcut icon', type: 'image/png', href: `${icon32}` }
           ]}
 
         >

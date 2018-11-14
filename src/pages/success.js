@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import '../components/layout.css'
 
 
-const MainBtn = styled.button` 
+const MainBtn = styled.a` 
 cursor: pointer;
 background: linear-gradient(125deg, #015FDF, #1ED2FC);
 border: 1px solid hsl(0, 0%, 100%);
@@ -38,21 +38,18 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 const SuccessPage = ({ data }) => (
     <Layout>
-        <div className="HeroProject">
-            <div className="HeroAltGroup">
-                <h1>Gracias</h1>
-                <p>
+        <div className="Hero">
+            <div className="HeroGroup">
+                <h1 className="HeroTitle">Gracias</h1>
+                <p className="HeroParagraph">
                         Gracias por tu interés, Interaction se pondrá pronto en contacto contigo para darle seguimiento a tu proyecto. 
                         
                 </p>
-                <p>
-                    8116558570
-                </p>
-                <p>
-                    interactionmx@gmail.com
-                </p>
+                <div className="GoBack">
+                    <MainBtn href="/">Volver a Home</MainBtn>
+                </div>
             </div>
-            <MainBtn>Volver a Home</MainBtn>
+          
         </div >
 
 

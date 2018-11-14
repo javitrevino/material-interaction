@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
+import Wave from '../components/Wave'
 
 
 
@@ -16,6 +17,18 @@ const ScreensGroup = styled.div`
         grid-template-columns: 1fr;
 
     }
+
+    @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+grid-gap: 100px;
+    grid-template-columns: repeat(2,310px);
+
+
+}
 
 `
 
@@ -37,6 +50,8 @@ const MicroGroup = styled.div`
 `
 
 const ViewPrototype = styled.div`
+text-align: center;
+
     display grid;
       justify-content: center;	
       justify-items: center;
@@ -123,15 +138,16 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 const SaludPage = ({ data }) => (
     <Layout>
-        <div className="HeroProject">
-            <div className="HeroAltGroup">
-                <h1>AR Médica</h1>
-                <h2>Salud Integral</h2>
-                <p>
-                    Este concepto de app de iOS fue diseñado para AR Médica una empresa de servicios de atención de emergencias y consultas médicas.  Se buscó hacer un diseño de interfaz placentera y funcional que sea familiar para usuarios de iOS por el uso de List Views y el diseño notificaciones
+        <div className="Hero">
+            <div className="HeroGroup">
+                <h1 className="HeroTitle">AR Médica</h1>
+                <h2 className="HeroSubtitle">Salud Integral</h2>
+                <p className="HeroParagraph">
+                    Este concepto de app de iOS fue diseñado para AR Médica, una empresa de servicios de atención de emergencias y consultas médicas.  Se buscó hacer un diseño de interfaz placentera y funcional que sea familiar para usuarios de iOS por el uso de List Views y el diseño notificaciones
                      para usuarios.
             </p>
             </div>
+            <Wave />
 
         </div >
         <GroupHeader>

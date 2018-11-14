@@ -4,6 +4,8 @@ import Layout from '../components/layout'
 import Card from '../components/Card'
 import Section from '../components/Section';
 import Link from 'gatsby-link'
+import Wave from '../components/Wave'
+
 
 
 
@@ -20,6 +22,18 @@ const ScreensGroup = styled.div`
         grid-template-columns: 1fr;
 
     }
+
+    @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+grid-gap: 100px;
+    grid-template-columns: repeat(2,310px);
+
+
+}
 
 `
 
@@ -38,6 +52,8 @@ const MicroGroup = styled.div`
 `
 
 const ViewPrototype = styled.div`
+text-align: center;
+
     display grid;
       justify-content: center;	
       justify-items: center;
@@ -124,17 +140,18 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 const HolaPage = ({ data }) => (
     <Layout>
 
-        <div className="HeroProject">
-            <div className="HeroAltGroup">
-                <h1>Hola Vecino</h1>
-                <h2>Smart Home App</h2>
-                <p>
-                    Hola Vecino es una app mobile que fue diseñada para un startup nuevo de Monterrey.
-                    La app sirve para administrar sectores residenciales privados. en los cuales se puede interactuar con aspectos de la colonia privada  como visitas, áreas comunes y notificaciones.
+        <div className="Hero">
+            <div className="HeroGroup">
+                <h1 className="HeroTitle">Hola Vecino</h1>
+                <h2 className="HeroSubtitle">Smart Home App</h2>
+                <p className="HeroParagraph">
+                    Hola Vecino es una app que fue diseñada para un startup nuevo de Monterrey.
+                    Sirve para administrar colonias privadas. Permite interactuar con aspectos como visitas, áreas comunes y notificaciones.
                     Interaction se encargó de crear un UI moderno y funcional para alcanzar los objetivos de diseño visual, UX y estructura.
 
                     </p>
             </div>
+            <Wave />
         </div>
 
         <GroupHeader>

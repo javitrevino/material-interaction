@@ -4,6 +4,7 @@ import Gif from '../components/Gif'
 import styled from 'styled-components'
 import '../components/Services.css'
 import Fab from '../components/Fab'
+import Wave from '../components/Wave'
 
 
 const InteractionServicesSection = styled.section`
@@ -12,13 +13,7 @@ display: grid;
  padding: 100px;
  border-bottom: 1px solid rgba(173,173,173,0.3);
 
- /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 812px)
-  and (orientation: landscape) {
-    display: none;
-}
+
 
 @media only screen and (max-width: 640px) {
   padding:0px;
@@ -35,6 +30,9 @@ const ExamplesText = styled.div`
  justify-content: center;
  
 }
+
+
+
  `
 
 const ServiceTitle = styled.h1`
@@ -53,6 +51,15 @@ font-size:24px;
 text-align: center;
 margin: 40px;
 }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+        font-size: 40px;
+
+}
+
 `
 
 const ToolsLabel = styled.span`
@@ -97,6 +104,24 @@ justify-items: center;
 @media only screen and (max-width: 640px) {
       display: none;
   
+}
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+   grid-template-columns: 1fr;
+   grid-gap: 104px;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+         grid-template-columns: 1fr;
+   grid-gap: 80px;
+
 }
 
 `
@@ -147,17 +172,18 @@ const GifsArea = styled.div`
 const ServicesPage = ({ data }) => (
 
   <Layout>
-    <div className="HeroAlt">
-      <div className="HeroAltGroup">
-        <h1>UI/UX en Monterrey</h1>
-        <p>
+    <div className="Hero">
+      <div className="HeroGroup">
+        <h1 className="HeroTitle">UI/UX en Monterrey</h1>
+        <p className="HeroParagraph" >
           Nuestro proceso de diseño UX/UI ayuda a las empresas de software y startups a diseñar y prototipar apps
            de iOS, Android y web apps modernas. Desde diseños UI de las pantallas,
             pasando por prototipos e interacciones animadas hasta workflows avanzados
            con componentes de código. Interaction es la única empresa que ofrece servicios de diseño UI y UX en Monterrey, somos especialistas en este rubro y nada más.
            </p>
       </div>
-    
+      <Wave />
+
     </div>
 
     <InteractionServicesSection>
@@ -203,7 +229,7 @@ const ServicesPage = ({ data }) => (
         <ServiceTitle> Prototipos Online</ServiceTitle>
         <ToolsLabel>Herramientas relevantes</ToolsLabel>
         <ToolsLogos>
-         
+
           <div className="AppBlock">
             <img src='https://dl.dropboxusercontent.com/s/2pbnbn10h070v3i/logo-invision.png?dl=0' width="56"></img>
             <p>Invision</p>
@@ -247,7 +273,7 @@ const ServicesPage = ({ data }) => (
             <img src='https://dl.dropboxusercontent.com/s/1pcpct4np2jbc6d/logo-flinto.png?dl=0' width="56"></img>
             <p>Flinto</p>
           </div>
-        
+
         </ToolsLogos>
         <p>
           Las interacciones táctiles ó "microinteractions" son un elemento importante en apps menos convencionales. Con herramientas como Principle y Flinto podemos hacer mini-prototipos que pueden ser utilizados en iPhone o visualizados en GIFs o videos de alta fidelidad que muestran interacciones únicas enfocadas a los eventos de la pantalla táctil de los smartphones como swipe, tap y pinch, entre otros. Las microinteractions son muy populares en sitios como Dribbble y en apps modernas del Silicon Valley, ya que deleitan a los usuarios y hacen que la app se sienta moderna y le da el toque humano. No sólo eso si no que la animación puede dar feedback importante para guiar a los usuarios de lo que ocurre en la app.
@@ -257,7 +283,7 @@ const ServicesPage = ({ data }) => (
       </ExamplesText>
       <ExamplesGroup>
         <div>
-          <ExampleImg src='https://dl.dropboxusercontent.com/s/aro1j8eqip2pjca/switch_UI.gif?dl=0'width="500" />
+          <ExampleImg src='https://dl.dropboxusercontent.com/s/aro1j8eqip2pjca/switch_UI.gif?dl=0' width="500" />
           <Caption>La animación guía  y deleita a tus usuarios</Caption>
         </div>
 
@@ -278,7 +304,7 @@ const ServicesPage = ({ data }) => (
         <ToolsLabel>Herramientas relevantes</ToolsLabel>
 
         <ToolsLogos>
-       
+
           <div className="AppBlock">
             <img src='https://dl.dropboxusercontent.com/s/xvrrf7zq1vy2p1a/logo-framerx.png?dl=0' width="56"></img>
             <p>Framer X</p>
@@ -290,14 +316,14 @@ const ServicesPage = ({ data }) => (
 
         </ToolsLogos>
         <p>
-        Para los usuarios que usan React, existe la opción de utilizar la herramienta de vanguardia
-  Framer X, la cual no solo permite generar prototipos de la más alta fidelidad si no que
-  también genera componentes de código en React que pueden ser utilizados como referencia
-para los equipos que utilizan React Native, ó directamente en el proyecto si utilizan React.js para web o Cordova.
-  
-  Incluso si tu compañía usa una tecnología diferente a React, Framer X es la mejor opción para
-  generar un prototipo de la más alta fidelidad que incluye inputs de texto, lógica y todas las 
-  interacciones completas de tu app, lo cual lo hace casi indistinguible de una app ya codificada para motivos de presentación y diseño de producto más sofisticado.
+          Para los usuarios que usan React, existe la opción de utilizar la herramienta de vanguardia
+    Framer X, la cual no solo permite generar prototipos de la más alta fidelidad si no que
+    también genera componentes de código en React que pueden ser utilizados como referencia
+  para los equipos que utilizan React Native, ó directamente en el proyecto si utilizan React.js para web o Cordova.
+
+    Incluso si tu compañía usa una tecnología diferente a React, Framer X es la mejor opción para
+    generar un prototipo de la más alta fidelidad que incluye inputs de texto, lógica y todas las
+    interacciones completas de tu app, lo cual lo hace casi indistinguible de una app ya codificada para motivos de presentación y diseño de producto más sofisticado.
       </p>
 
 
@@ -313,7 +339,7 @@ para los equipos que utilizan React Native, ó directamente en el proyecto si ut
           <Caption>Puede generar componentes de React con TypeScript</Caption>
         </div>
       </ExamplesGroup>
-      
+
 
     </InteractionServicesSection>
     <Fab />

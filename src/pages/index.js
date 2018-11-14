@@ -138,13 +138,7 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
  const InteractionSection= styled.section`
  margin-bottom: 140px;
 
- /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 812px)
-  and (orientation: landscape) {
-    display: none;
-}
+
  
  `
 
@@ -155,12 +149,23 @@ const BenefitsArea = styled.section`
   margin:64px;
   padding: 64px;
   align-content: center;
+
     @media (max-width: 576px){
     grid-template-columns: 1fr;
     grid-gap: 0px;
   margin: 0px;
     justify-content: center;
     }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" Portrait ----------- */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+        grid-template-columns: 1fr;
+
 }
 
 }
@@ -181,6 +186,19 @@ const BenefitsAreaReversed = styled.section`
     flex-direction: column-reverse;
  
     }
+
+    /* ----------- iPad 3, 4 and Pro 9.7" Portrait ----------- */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+        grid-template-columns: 1fr;
+         display: flex;
+    flex-direction: column-reverse;
+ 
+
+}
  `
 
 const Benefit = styled.div`
@@ -199,6 +217,14 @@ margin: 0;
    @media (max-width: 576px){
     font-size: 33px;
     }
+
+    @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+        font-size: 40px;
+
+}
  `
 const BenefitSubTitle = styled.h3`
 color: #333333;
@@ -219,10 +245,38 @@ font-family: "Poppins";
 font-weight: 400;
 font-size: 25px;
 color: #595959;
+
    @media (max-width: 576px){
    font-size: 18px;
       
     }
+
+    /* Portrait  and Landscape 9.7 iPad Pro and older iPads */
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+        font-size: 20px;
+
+}
+
+    /* Landscape 9.7 iPad Pro and older iPads */
+
+
+
+
+/* Portrait 12.9 iPad Pro */
+    @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+ 
+    font-size: 22px;
+
+}
+
 
  
  `
@@ -290,8 +344,8 @@ const IndexPage = ({ data }) => (
 
     <div className="Hero">
       <div className="HeroGroup">
-        <h1>Diseño UI + Prototipos </h1>
-        <p>Interaction es la única empresa en México dedicada 100% al diseño UI/UX y prototipos de apps. Ayudamos a las empresas y startups en el diseño de pantallas, experiencia de usuario y  prototipos interactivos para que puedan desarrollar software increíble.</p>
+        <h1 className="HeroTitle">Diseño UI + Prototipos </h1>
+        <p className="HeroParagraph">Interaction es la única empresa en Monterrey dedicada 100% al diseño UI/UX y prototipos de apps. Ayudamos a las empresas y startups en el diseño de pantallas, experiencia de usuario y  prototipos interactivos para que puedan desarrollar software increíble.</p>
         <BtnGroup>
           <MainBtn  href="/portfolio/">Ver Portfolio</MainBtn>
           <SideBtn href="/servicios/"> Servicios</SideBtn>
@@ -299,6 +353,8 @@ const IndexPage = ({ data }) => (
 
       
       </div>
+      <Wave />
+
     </div>
 
     <InteractionSection>

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
+import Wave from '../components/Wave'
 
 
 
@@ -35,6 +36,8 @@ const MicroGroup = styled.div`
 `
 
 const ViewPrototype = styled.div`
+text-align: center;
+
     display grid;
       justify-content: center;	
       justify-items: center;
@@ -122,16 +125,18 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 const OxxoPage = ({ data }) => (
     <Layout>
 
-        <div className="HeroProject">
-            <div className="HeroAltGroup">
-                <h1>Oxxo Gas</h1>
-                <h2>Checklist Virtual</h2>
-                <p>
+        <div className="Hero">
+            <div className="HeroGroup">
+                <h1 className="HeroTitle">Oxxo Gas</h1>
+                <h2 className="HeroSubtitle">Checklist Virtual</h2>
+                <p className="HeroParagraph">
                     Checklist Virtual es una web app que se diseño para Oxxo Gas. Es una plataforma web para gerentes
                     de campo que permite hacer registros y llevar la administración del control de calidad de las estaciones de Oxxo Gas.
 
                     </p>
             </div>
+            <Wave />
+
         </div>
 
         <GroupHeader>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-
+import Wave from '../components/Wave'
 
 
 const ScreensGroup = styled.div`
@@ -18,6 +18,29 @@ const ScreensGroup = styled.div`
 
     }
 
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+grid-gap: 100px;
+    grid-template-columns: repeat(2,310px);
+
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+       grid-gap: 80px;
+    grid-template-columns: repeat(2,310px);
+}
+
+
+
+
 `
 
 const MicroGroup = styled.div`
@@ -31,11 +54,37 @@ const MicroGroup = styled.div`
         grid-template-columns: 1fr;
     grid-gap: 64px; 
 
-    }s
+    }
+
+    @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+        grid-template-columns: repeat(2, 310px);
+
+grid-gap: 40px;
+   
+
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+       grid-template-columns: 1fr;
+
+grid-gap: 80px;
+}
+
 `
 
 const ViewPrototype = styled.div`
-    display grid;
+text-align: center;
+        display: grid;
       justify-content: center;	
       justify-items: center;
     background: linear-gradient(125deg, #015FDF, #1ED2FC);
@@ -43,7 +92,8 @@ const ViewPrototype = styled.div`
     color: white;
     padding-top: 48px;
     padding-bottom:48px;
-  
+
+
 
 `
 
@@ -96,11 +146,11 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 const ProjectPage = ({ data }) => (
     <Layout>
-        <div className="HeroProject">
-            <div className="HeroAltGroup">
-                <h1>Tecnólogico de Monterrey</h1>
-                <h2>Bee Working</h2>
-                <p>
+        <div className="Hero">
+            <div className="HeroGroup">
+                <h1 className="HeroTitle">Tecnólogico de Monterrey</h1>
+                <h2 className="HeroSubtitle">Bee Working</h2>
+                <p className="HeroParagraph">
                     Bee Working es una propuesta de app que se diseñó para el Tec de Monterrey, su propósito es
  el de ayudar a los estudiantes a colaborar en sus proyectos en equipo
  y mostrar contenidos de educación financiera. La interfaz es simple y
@@ -108,7 +158,7 @@ const ProjectPage = ({ data }) => (
  colaborar en harmonia.
            </p>
             </div>
-
+            <Wave />
         </div >
         <GroupHeader>
             <h1 className="PieceHeaderTitle">Diseños de pantalla</h1>

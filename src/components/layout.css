@@ -35,8 +35,8 @@ p{
 
 
 .Hero{
-    background: url('https://dl.dropboxusercontent.com/s/h6d09w976db36f8/interaction_bg.jpg?dl=0');
-    height: 800px;
+    background: url('../images/wallpaper3.jpg');
+    height: 1000px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -45,40 +45,11 @@ p{
 .HeroGroup {
     margin: 0 auto;
     max-width: 800px;
-    padding:250px 50px;
+    padding: 250px 50px;
     text-align: center;
 }
 
-.HeroAlt{
-    background: url('https://dl.dropboxusercontent.com/s/klshpf75kf4g64r/bg-alt.jpg?dl=0');
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    
-}
-
-.HeroProject{
-    background: url('https://dl.dropboxusercontent.com/s/484f21auo7hmh6z/ocean_bg.png?dl=0');
-    height: 900px; 
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    margin-bottom: 120px;
-}
-
-
-.HeroAltGroup {
-  margin: 0 auto;
-    max-width: 800px;
-    padding:250px 50px;
-    text-align: center;
-}
-
-
-
-
-.Hero h1, .HeroAlt h1, .HeroProject h1 {
+.HeroTitle {
     font-weight: 600;
     margin: 0;
     color: white;
@@ -92,52 +63,95 @@ p{
     animation-timing-function: cubic-bezier(0.2, 0.8, 0.1, 1);
 }
 
-.HeroProject h2
-{
-        font-weight: 300;
-    margin: 0;
+.HeroSubtitle {
+    font-weight: 200;
+    font-size: 40px;
     color: white;
-    font-size: 32px;
-    line-height: 1.2;
-    opacity: 0;
-    animation: HeroAnimation;
-    animation-duration: 3s;
-    animation-delay: 0.1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.2, 0.8, 0.1, 1);
 }
 
-.Hero p, .HeroAlt p, .HeroProject p{
+.HeroParagraph {
     color: rgba(255, 255 ,255 , 1);
     font-size: 30px;
     line-height: 1.5;
     animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.1, 1);
     opacity: 0;
+        line-height: 48px;
 }
 
-.HeroAlt p {
-      color: rgba(255, 255 ,255 , 1);
-    font-size: 24px;
-    line-height: 1.5;
-    animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.1, 1);
-    opacity: 0;
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+        .HeroParagraph {
+        font-size: 17px;
+        line-height: 31px;
+
+        
+    }
+
+     .Hero{
+            height: 1145px;
+
+        }
+
+
+    .WideScreen {
+        max-width: 350px;
+        border: 1px solid #eaeaea;
+        box-shadow: 0px 1px 5px 0px #dfdfdf57;
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    }
+
+  }
+
+
+  /* ----------- iPhone 6, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .Hero {
+        height: 1400px;
+    }
+
+    .Hero p {
+        font-size: 40px;
+    }
+
+    .WideScreen {
+        max-width: 350px;
+        border: 1px solid #eaeaea;
+        box-shadow: 0px 1px 5px 0px #dfdfdf57;
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    }
+    
 }
 
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .Hero{
+        height: 1100px;
+    }
+}
 
 
 
 @media  (max-width: 736px) {
 
-    .Hero, .HeroProject {
-        height: 1020px
-    }
-
-    
-.HeroAlt {
-        height: 960px
-    }
-
-
+  
 
     
 .HeroGroup {
@@ -177,7 +191,7 @@ p{
     }
 }
 
-.Hero svg {
+.Hero .WaveSvg {
     position: absolute; 
     bottom:0;
     left: 0;
@@ -193,7 +207,9 @@ p{
 }
 
 
-/* Landscape */
+/* Landscape
+
+*/
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
@@ -207,6 +223,8 @@ p{
 
 }
 
+
+
 .Screen {
     width: 300px;
     border: 1px solid #eaeaea;
@@ -217,12 +235,15 @@ p{
 }
 
 .WideScreen {
-        width: 700px;
+        width: 880px;
     border: 1px solid #eaeaea;
     box-shadow: 0px 1px 5px 0px #dfdfdf57;
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 }
+
+
+
 
 .UltraWideScreen {
         width: 1000px;
@@ -259,23 +280,7 @@ a.AnchorInvisionWrapper {
 
 
 
-@media (max-width: 640px) {
 
-    .HeroAlt
-    { 
-    margin-bottom: 56px;
-    }
-
-    .Hero .Logos {
-    grid-template-columns: repeat(3, 1fr);
-    }
-
-     .PieceHeaderTitle {
-    font-size: 25px;
-    font-weight:500;
- 
-    }
-}
 
 .MobileMenu {
     background-color: black;
@@ -326,6 +331,7 @@ form.Form {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
+        margin-bottom: 80px;
 }
 
 .Form label{
@@ -334,13 +340,24 @@ form.Form {
     display: block;
 }
 input {
-    border: 1px solid rgba(0,0,0, 0.1);
+    border: 1px solid rgba(0,0,0,.1);
     border-radius: 3px;
+    width: 320px;
     display: block;
-    width: 356px;
-    height: 40px;
     margin-top: 12px;
+    font-size: 18px;
+    padding: 9px;
+    font-family: "Roboto";
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     
+}
+
+
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 1px 1px rgba(240,81,44,0.72) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    outline: 0 none;
 }
 
 textarea {
@@ -353,3 +370,96 @@ textarea {
     padding: 8px;
     font-size: 17px;
 }
+
+.FormBtnWrapr{
+    display: grid;
+    justify-items: center;
+}
+
+
+.ContactArea a {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 12px;
+    color: white;
+    vertical-align: middle;
+}
+
+.ContactArea div {
+    margin: 40px;
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .ContactArea,  .ContactArea div, .ContactArea a{
+        margin-top: 40px;
+    }
+}
+
+
+
+
+.ContactArea svg{
+    vertical-align: middle;
+}
+
+.GoBack {
+    display: grid;
+    justify-items: center;
+    margin-top: 88px;
+}
+
+@media (max-width: 640px) {
+
+    
+    .Hero .Logos {
+    grid-template-columns: repeat(3, 1fr);
+    }
+
+     .PieceHeaderTitle {
+    font-size: 25px;
+    font-weight:500;
+ 
+    }
+
+    textarea, input{
+        max-width: 300px
+    }
+
+    .ContactArea svg{
+        display: none;
+    }
+
+    .ContactArea a {
+        font-size: 23px;
+        
+    }
+
+    .ContactArea div {
+        margin: 0px;
+    margin-top: 8px;
+    
+}
+}
+
+/* Apple Devices CSS */
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .Hero p {
+        font-size: 19px;
+    }
+}
+
+
+
+

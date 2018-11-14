@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Card from '../components/Card'
 import Section from '../components/Section';
 import Link from 'gatsby-link'
+import Wave from '../components/Wave'
 
 
 
@@ -20,6 +21,18 @@ const ScreensGroup = styled.div`
         grid-template-columns: 1fr;
 
     }
+
+    @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+grid-gap: 100px;
+    grid-template-columns: repeat(2,310px);
+
+
+}
 
 `
 
@@ -41,6 +54,8 @@ const MicroGroup = styled.div`
 `
 
 const ViewPrototype = styled.div`
+text-align: center;
+
     display grid;
       justify-content: center;	
       justify-items: center;
@@ -125,17 +140,18 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 const BanregioPage = ({ data }) => (
     <Layout>
-        <div className="HeroProject">
-            <div className="HeroAltGroup">
-                <h1>Banregio</h1>
-                <h2>Auto A Mi Precio</h2>
-                <p>
+        <div className="Hero">
+            <div className="HeroGroup">
+                <h1 className="HeroTitle">Banregio</h1>
+                <h2 className="HeroSubtitle">Auto A Mi Precio</h2>
+                <p className="HeroParagraph">
                     Esta propuesta fue diseñada para Banregio con el
                     objetivo de cumplir necesidades de su su división automotriz en relación al servicio
                     de asistencia en el camino  por medio de talleres mecánicos  así como también su plataforma para subasta de vehículos online.
                      El diseño del UI fue pensando para ser funcional, intuitivo y moderno.
            </p>
             </div>
+            <Wave />
 
         </div >
         <GroupHeader>

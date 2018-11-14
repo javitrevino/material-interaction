@@ -8,6 +8,8 @@ import Cell from '../components/Cell'
 
 import staticdata from '../../staticdata.json'
 import Fab from '../components/Fab'
+import Wave from '../components/Wave'
+
 
 
 
@@ -56,15 +58,16 @@ const SectionCellGroup = styled.div`
 
 const PortfolioPage = ({ data }) => (
     <Layout>
-        <div className="HeroAlt">
-            <div className="HeroAltGroup">
-                <h1>Especialización en UI/UX</h1>
-                <p>
+        <div className="Hero">
+            <div className="HeroGroup">
+                <h1 className="HeroTitle">Especialización en UI/UX</h1>
+                <p className="HeroParagraph">
                     Hecha un vistazo a algunos de nuestros proyectos hechos para clientes de Monterrey. Interaction es la única empresa
                     mexicana dedicada exclusivamente al diseño UI/IX y a los prototipos interactivos de apps.
                     Nuestro portfolio te permitirá ver algo de nuestro trabajo. Muy pronto publicaremos más proyectos.
            </p>
             </div>
+            <Wave />
 
         </div >
         <div className="Cards">
