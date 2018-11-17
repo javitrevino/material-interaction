@@ -327,11 +327,11 @@ const IndexPage = ({ data }) => (
             <BenefitTitle>Enfoque Moderno</BenefitTitle>
             <BenefitSubTitle>Estética, Funcionalidad y Emoción</BenefitSubTitle>
             <BenefitsParagraph>
-              Tener un workflow moderno de Diseño UI basado en apps como Sketch
-              o Framer X permite diseñar muchos wireframes para explorar todas
-              las posibilidades en poco tiempo y después basado en las
-              conclusiones crear diseños visuales refinados con perfección por
-              píxel que lucen como una app terminada.
+              Nuestro workflow basado en vectores con apps como Sketch permite
+              diseñar muchos wireframes para explorar todas las posibilidades en
+              poco tiempo y después basado en las conclusiones crear diseños
+              visuales refinados con perfección por píxel que lucen como una app
+              terminada.
             </BenefitsParagraph>
           </div>
         </Benefit>
