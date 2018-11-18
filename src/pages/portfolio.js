@@ -56,9 +56,7 @@ const PortfolioPage = ({ data }) => (
         <p className="HeroParagraph">
           Interaction se concentra en dar valor a los emprendedores de software.
           Somos expertos en interfaces de usuario y prototipos, nuestro trabajo
-          se traslada a entregables visibles y concretos. Muy pronto
-          publicaremos 3 proyectos más: uno que hicimos para Sisamex y otros 2
-          que hicimos para startups ( uno mexicano y otro de EU )
+          se traslada a entregables visibles y concretos.
         </p>
       </div>
       <Wave />
