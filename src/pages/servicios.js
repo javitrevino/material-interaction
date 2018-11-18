@@ -160,11 +160,11 @@ const ServicesPage = ({ data }) => (
       <div className="HeroGroup">
         <h1 className="HeroTitle">Diseño Universal</h1>
         <p className="HeroParagraph">
-          En Interaction, creamos nuestro propio método de trabajo: se llama
-          Diseño Universal. Toma elementos del diseño UI, UX y el Design
-          Thinking para crear algo mucho más simple y dinámico. Somos un grupo
-          de diseñadores de Monterrey con la misión de transmitir el gran diseño
-          en el software que se desarrolla en México.
+        Somos un grupo de diseñadores de Monterrey con la misión de apoyar a las empresas de software
+        de México a que tengan un gran diseño en sus apps. 
+        En Interaction, creamos nuestro propio método de trabajo: se llama
+            Diseño Universal. Toma elementos del diseño UI, UX y el Design
+            Thinking para crear algo mucho más efectivo. Estos son los 4 pilares.
         </p>
       </div>
       <Wave />
@@ -346,7 +346,7 @@ const ServicesPage = ({ data }) => (
     </InteractionServicesSection>
     <InteractionServicesSection>
       <ExamplesText>
-        <ServiceTitle>DesignScript </ServiceTitle>
+        <ServiceTitle>ProtoScript </ServiceTitle>
         <BenefitSubTitle>Prototipos Avanzados</BenefitSubTitle>
 
         <ToolsLabel>Herramientas relevantes</ToolsLabel>
@@ -398,11 +398,7 @@ const ServicesPage = ({ data }) => (
           <Caption>Puede generar componentes de React con TypeScript</Caption>
         </div>
       </ExamplesGroup>
-      <Note>
-        * Estamos trabajando en un documento detallado donde explicamos nuestro
-        método, Diseño Universal. Estén al tanto del PDF que publicaremos
-        pronto.
-      </Note>
+     
     </InteractionServicesSection>
     <Fab />
   </Layout>
