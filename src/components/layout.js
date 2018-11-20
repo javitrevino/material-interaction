@@ -36,6 +36,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
+
           title={data.site.siteMetadata.title}
           meta={[
             {
@@ -47,16 +48,18 @@ const Layout = ({ children }) => (
                 data.site.siteMetadata.keywords
             },
             {
-              name: 'property', content: `${opengraph}`
+              property: 'og:image', content: `${opengraph}`
             }
           ]}
           link={[
             { rel: 'shortcut icon', type: 'image/png', href: `${icon32}` }
           ]}
 
+
         >
           <html lang="es" />
         </Helmet>
+
         <Header />
         <div
           style={{
