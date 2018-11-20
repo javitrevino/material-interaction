@@ -6,7 +6,7 @@ import Header from './header'
 import './layout.css'
 import Footer from '../components/Footer'
 import icon32 from '../images/interaction_favicon.png'
-
+import opengraph from '../images/interaction_social.png'
 
 
 
@@ -44,6 +44,9 @@ const Layout = ({ children }) => (
             {
               name: 'keywords', content:
                 data.site.siteMetadata.keywords
+            },
+            {
+              name: 'property', content: `${opengraph}`
             }
           ]}
           link={[
@@ -51,7 +54,7 @@ const Layout = ({ children }) => (
           ]}
 
         >
-          <html lang="en" />
+          <html lang="es" />
         </Helmet>
         <Header />
         <div
