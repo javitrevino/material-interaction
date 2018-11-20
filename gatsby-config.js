@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Interaction',
-    description: 'Interaction es una empresa de Monterrey, Nuevo León que ayuda a los startups y empresas de software a diseñar y prototipar sus apps en alta fidelidad. Nos enfocamos en prototipos móviles para apps de iOS, Android ó React. Nuestro servicio es único en México, ya que nuestro enfoque es exclusivamente en entregar lo mejor en UI/UX, y prototipos de alta fidelidad realizados en herramientas modernas como Sketch, Origami Studio y Framer X.Podemos generar las especificaciones para ser utilizadas de referencia por tus desarrolladores.',
+    description: 'Interaction asiste a las empresas de software en el diseño UI, prototipos y developer handoff para ayudarles a crear apps increíbles. Nuestro propio método llamado Diseño Universal combina lo mejor del Diseño UI/UX y el Design Thinking para crear algo más efectivo.',
     keywords: 'prototipos monterrey, diseño UI Monterrey, agencia UX Monterrey, Framer Monterrey, Sketch UI Monterrey, Diseño UX Monterrey, Origami Studio Monterrey, Interfaces Monterrey, Ux Mexico, UI Mexico, Framer Mexico, Prototipos Agencia, Prototipos Mexico'
   },
   plugins: [
