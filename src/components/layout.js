@@ -49,6 +49,9 @@ const Layout = ({ children }) => (
             },
             {
               property: 'og:image', content: `${opengraph}`
+            },
+            {
+              name: 'google-site-verification', content: 'SEngJ_JiEvHgHy-V6ZMLbG2kaH-EfKQxJGoQ7WJBICo'
             }
           ]}
           link={[
