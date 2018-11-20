@@ -6,7 +6,7 @@ import Header from './header'
 import './layout.css'
 import Footer from '../components/Footer'
 import icon32 from '../images/interaction_favicon.png'
-import opengraph from '../images/interaction_social.png'
+import opengraph from '../images/interaction_opengraph.png'
 
 
 
