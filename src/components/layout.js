@@ -10,6 +10,7 @@ import opengraph from '../images/interaction_opengraph.png'
 
 
 
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -45,9 +46,7 @@ const Layout = ({ children }) => (
               name: 'keywords', content:
                 data.site.siteMetadata.keywords
             },
-            {
-              name: 'property', content: `${opengraph}`
-            }
+
           ]}
           link={[
             { rel: 'shortcut icon', type: 'image/png', href: `${icon32}` }
