@@ -8,20 +8,19 @@ import Wave from "../components/Wave";
 import "../components/Services.css";
 import Fab from "../components/Fab";
 import posed from "react-pose";
+import Card from '../components/Card'
 
-const config = {
-  off: {
-    opacity: 0.5,
-    scale: 0
-  },
+/* eslint-disable */
 
-  on: {
-    opacity: 1,
-    scale: 1
-  }
-};
-
-posed(Fab);
+const BlogPost = ({ node }) => {
+  return (
+    <li>
+      <a href={node.slug}>{node.title}</a>
+      <img src={node.image.file.url}></img>
+      <div> {node.content.childMarkdownRemark.excerpt}</div>
+    </li>
+  )
+}
 
 const BtnGroup = styled.div`
 display: grid;
@@ -240,6 +239,8 @@ const BenefitsParagraph = styled.p`
   }
 `;
 
+
+
 const GifWrapper = styled.div`
   display: grid;
   align-content: center;
@@ -341,11 +342,11 @@ const IndexPage = ({ data }) => (
           <BenefitTitle>Visión Clara</BenefitTitle>
           <BenefitSubTitle> Diseña antes de desarrollar </BenefitSubTitle>
           <BenefitsParagraph>
-            Interaction te la habilidad de tomar los diseños UI y darles vida.
+            Interaction te da la habilidad de tomar los diseños UI y darles vida.
             Puedes elegir desde algo simple pero poderoso como un prototipo
             online en Invision, o algo más ambicioso como animaciones o
             prototipos avanzados. El objetivo es que puedas envisionar en
-            grande, presentar tu proyecto a tu equipo o socios, y tener claridad
+            grande, presentar tu proyecto a tu equipo o socios y tener claridad
             en la dirección que lleva tu proyecto.
           </BenefitsParagraph>
         </div>
@@ -401,9 +402,36 @@ const IndexPage = ({ data }) => (
       <ActionContainer>
         <SpecialBtn href="/cotiza">Cotiza Hoy</SpecialBtn>
       </ActionContainer>
+
+
     </InteractionSection>
     <Fab />
   </Layout>
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query pageQuery {
+    allContentfulBlog (filter: {
+      node_locale: { eq: "en-US"}
+    }){
+      edges {
+        node{
+          title
+          slug 
+          content {
+            childMarkdownRemark {
+              excerpt
+            }
+          }
+          image{
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`

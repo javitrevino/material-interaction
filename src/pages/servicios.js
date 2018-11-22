@@ -6,6 +6,8 @@ import "../components/Services.css";
 import Fab from "../components/Fab";
 import Wave from "../components/Wave";
 
+/* eslint-disable */
+
 const InteractionServicesSection = styled.section`
   display: grid;
 
@@ -160,11 +162,11 @@ const ServicesPage = ({ data }) => (
       <div className="HeroGroup">
         <h1 className="HeroTitle">Diseño Universal</h1>
         <p className="HeroParagraph">
-        Somos un grupo de diseñadores de Monterrey con la misión de apoyar a las empresas de software
-        de México a que tengan un gran diseño en sus apps. 
-        En Interaction, creamos nuestro propio método de trabajo: se llama
-            Diseño Universal. Toma elementos del diseño UI, UX y el Design
-            Thinking para crear algo mucho más efectivo. Estos son los 4 pilares.
+          Somos un grupo de diseñadores de Monterrey con la misión de apoyar a las empresas de software
+          de México a que tengan un gran diseño en sus apps.
+          En Interaction, creamos nuestro propio método de trabajo: se llama
+              Diseño Universal. Toma elementos del diseño UI, UX y el Design
+              Thinking para crear algo mucho más efectivo. Estos son los 4 pilares.
         </p>
       </div>
       <Wave />
@@ -398,7 +400,7 @@ const ServicesPage = ({ data }) => (
           <Caption>Puede generar componentes de React con TypeScript</Caption>
         </div>
       </ExamplesGroup>
-     
+
     </InteractionServicesSection>
     <Fab />
   </Layout>

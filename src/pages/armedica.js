@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import Wave from '../components/Wave'
 
-
+/* eslint-disable */
 
 const ScreensGroup = styled.div`
     display: grid;

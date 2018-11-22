@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import './layout.css'
 
-
+/* eslint-disable */
 
 const MenuTrigger = styled.a`
 display: none;

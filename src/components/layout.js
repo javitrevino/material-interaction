@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import icon32 from '../images/interaction_favicon.png'
 import opengraph from '../images/interaction_opengraph.png'
 
+/* eslint-disable */
 
 
 
@@ -57,8 +58,6 @@ const Layout = ({ children }) => (
           link={[
             { rel: 'shortcut icon', type: 'image/png', href: `${icon32}` }
           ]}
-
-
         >
           <html lang="es" />
         </Helmet>

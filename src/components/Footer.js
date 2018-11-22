@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+/* eslint-disable */
+
 const FooterGroup = styled.div`
 background-color: rgb(51, 51, 51);
 color: white;

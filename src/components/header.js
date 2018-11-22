@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import "./Header.css";
 import styled from 'styled-components'
 
+/* eslint-disable */
 
 const QuoteBtn = styled.a` 
 background: linear-gradient(121deg, #015FDF, #1ED2FC);

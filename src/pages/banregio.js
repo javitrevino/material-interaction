@@ -6,7 +6,7 @@ import Section from '../components/Section';
 import Link from 'gatsby-link'
 import Wave from '../components/Wave'
 
-
+/* eslint-disable */
 
 const ScreensGroup = styled.div`
     display: grid;

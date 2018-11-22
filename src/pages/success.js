@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import '../components/layout.css'
 
+/* eslint-disable */
 
 const MainBtn = styled.a` 
 cursor: pointer;

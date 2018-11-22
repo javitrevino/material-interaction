@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import Wave from '../components/Wave'
 
+/* eslint-disable */
 
 const ScreensGroup = styled.div`
     display: grid;
@@ -176,7 +177,7 @@ const ProjectPage = ({ data }) => (
 
         <ViewPrototype>
             <a className="AnchorInvisionWrapper" href="https://invis.io/JKP13NMNSXF" target="_blank">
-                <img src="https://dl.dropboxusercontent.com/s/2pbnbn10h070v3i/logo-invision.png?dl=0" width="80"></img>
+                <img alt="Invision" src="https://dl.dropboxusercontent.com/s/2pbnbn10h070v3i/logo-invision.png?dl=0" width="80"></img>
                 <h4 className="InvisionCta"> Ver prototipo en Invision </h4>
 
             </a>
