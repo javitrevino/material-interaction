@@ -11,7 +11,7 @@ const ScreensGroup = styled.div`
     grid-template-columns: repeat(3,310px);
  justify-items: center;
     justify-content: center;
-    margin-bottom: 120px;
+ 
 
     @media (max-width: 647px) {
         grid-template-columns: 1fr;
@@ -40,7 +40,6 @@ const MicroGroup = styled.div`
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-bottom: 112px;
     justify-items: center;
     @media (max-width: 647px) {
         grid-template-columns: 1fr;
@@ -136,6 +135,15 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 `
 
+const CaseStudy = styled.div`
+       display: grid;
+    justify-content: center;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+`
+
 const SaludPage = ({ data }) => (
     <Layout>
         <div className="Hero">
@@ -157,13 +165,35 @@ const SaludPage = ({ data }) => (
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/8ykntwb7u4zt1yb/ar1.png?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/jngapjqlecr06gk/ar2.png?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/t5d80nrc2vuwcjj/ar3.png?dl=0' />
+
+        </ScreensGroup>
+        <CaseStudy>
+            <p>
+                Este concepto hecho par AR Salud Integral fue diseñado con el objetivo de crear una experiencia limpia y transparente. Fue creado en un par de horas, por lo que creemos que fue un buen ejercicio den agilidad, con el uso de Sketch pudimos hacer algo que sirvió para presentación y negociación
+            </p>
+        </CaseStudy>
+        <ScreensGroup>
+
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/t5d80nrc2vuwcjj/ar3.png?dl=0vcivpinixx8ucka/ar4.png?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/dk99dbvpmgu0qqb/ar5.png?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/uqihf7cxulclsqo/ar6.png?dl=0' />
+
+        </ScreensGroup>
+        <CaseStudy>
+            <p>
+                La creación de MVP ( Productos mínimos viables ) es importante. No todos los proyectos terminan siendo desarrollados pero sirven para  poder comunicarse entre organizaciones
+            </p>
+        </CaseStudy>
+        <ScreensGroup>
+
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/0g907t5r1kivi5a/ar7.png?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/26e0wsk7xikap4o/ar8.png?dl=0' />
         </ScreensGroup>
-
+        <CaseStudy>
+            <p>
+                El diseño de notificaciones de iOS es una área subestimada, ya que debemos de predecir cómo nuestros usuarios van a interactuar con el OS nativo de su preferencia.
+            </p>
+        </CaseStudy>
         <ViewPrototype>
             <a className="AnchorInvisionWrapper" href="https://invis.io/Q9P2SZWTZAM" target="_blank">
                 <img src="https://dl.dropboxusercontent.com/s/2pbnbn10h070v3i/logo-invision.png?dl=0" width="80"></img>
@@ -179,6 +209,11 @@ const SaludPage = ({ data }) => (
         <MicroGroup>
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/2g8ckglirsxhihq/AR.gif?dl=0' />
         </MicroGroup>
+        <CaseStudy>
+            <p>
+                Se creó esta animación en Flinto para ilustrar el sistema de calificación de servicios.
+            </p>
+        </CaseStudy>
         <ActionContainer>
             <MainBtnNoBorder href="/cotiza" >Cotiza Ya</MainBtnNoBorder>
         </ActionContainer>

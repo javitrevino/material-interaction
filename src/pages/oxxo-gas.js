@@ -12,7 +12,6 @@ const ScreensGroup = styled.div`
  justify-items: center;
 
     justify-content: center;
-    margin-bottom: 120px;
 
     @media (max-width: 647px) {
         grid-template-columns: 1fr;
@@ -26,7 +25,6 @@ const MicroGroup = styled.div`
     grid-gap: 24px;
     grid-template-columns: auto;
     justify-content: center;
-    margin-bottom: 112px;
     justify-items: center;
     @media (max-width: 647px) {
         grid-template-columns: 1fr;
@@ -70,28 +68,6 @@ background-color: #444444;
 
 `
 
-const SpecialBtn = styled.a`
-text-align: center;
-cursor: pointer;
-background: linear-gradient(125deg, rgba(45, 55, 105, 1.00), rgba(234, 80, 108, 1.00));
-border: 1px solid hsl(0, 0%, 100%);
-border-radius: 97px;
-font-weight: 600;
-font-size: 21px;
-line-height: 64px;
-text-transform: uppercase;
-color: white;
-display: block;
-width: 250px;
-height: 64px;
-transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-&:hover{
-    /* background: 0 10px 20px rgba(0,0,0, 0.85); */
-    color: #dcdde1;
-    box-shadow: 0 10px 20px rgba(0,0,0, 0.25);
-
-}
-`
 
 const MainBtnNoBorder = styled.a` 
 @media (max-width: 576px){
@@ -122,6 +98,19 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 `
 
+const CaseStudy = styled.div`
+       display: grid;
+    justify-content: center;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+`
+
+const Separator = styled.div`
+height: 6rem;
+ `
+
 const OxxoPage = ({ data }) => (
     <Layout>
 
@@ -143,15 +132,36 @@ const OxxoPage = ({ data }) => (
             <h1 className="PieceHeaderTitle">Diseños de pantalla</h1>
         </GroupHeader>
         <ScreensGroup>
-            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/1vs5wmp4bq7hgl7/oxxo1.png?dl=0' />
-            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/ek4t0vvtmpx3q2s/oxxo2.png?dl=0' />
-            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/uajr49kfw44nkoq/oxxo3.png?dl=0' />
+            <img alt="UI" className="WideScreen" src='https://dl.dropboxusercontent.com/s/1vs5wmp4bq7hgl7/oxxo1.png?dl=0' />
 
         </ScreensGroup>
+        <CaseStudy>
+            <p>
+                Checklist virtual fue una web app diseñada para Oxxo Gas con la finalidad de que ser utilizada por gerentes para llevar el control de calidad de las estaciones de la corporación.
+            </p>
+            <p>
+                Anteriormente se trabajaba todo eso en papel pero nos pidieron diseñar una solución que requería ser una web app para desktop principalmente por sus propios requerimientos internos.
+            </p>
+        </CaseStudy>
+        <ScreensGroup>
+            <img alt="UI" className="WideScreen" src='https://dl.dropboxusercontent.com/s/ek4t0vvtmpx3q2s/oxxo2.png?dl=0' />
+
+        </ScreensGroup>
+        <CaseStudy>
+            <p>
+                Se diseñó pensando en crear algo muy funcional pero con un gran diseño a la vez. Tuvimos la restricción de diseñar la app pensando en el framework de desarrollo web Bootstrap. Los desarrolladores tenían que terminarla en poco tiempo y nos pidieron apegarnos a los estilos por default del framework.             </p>
+            <p>
+                Este es un buen ejemplo de que el diseño hace mancuerna con el desarrollo y los negocios. No siempre se trata de crear algo estéticamente sublime o demasiado estilizado pero de poder colaborar para lograr los objetivos de negocios.             </p>
+        </CaseStudy>
+        <ScreensGroup>
+            <img alt="UI" className="WideScreen" src='https://dl.dropboxusercontent.com/s/uajr49kfw44nkoq/oxxo3.png?dl=0' />
+
+        </ScreensGroup>
+        <Separator />
 
         <ViewPrototype>
-            <a className="AnchorInvisionWrapper" href="https://invis.io/JYOR9SPBUTW" target="_blank">
-                <img src="https://dl.dropboxusercontent.com/s/2pbnbn10h070v3i/logo-invision.png?dl=0" width="80"></img>
+            <a className="AnchorInvisionWrapper" href="https://invis.io/JYOR9SPBUTW" target="_blank" rel="noopener noreferrer">
+                <img alt="Invision" src="https://dl.dropboxusercontent.com/s/2pbnbn10h070v3i/logo-invision.png?dl=0" width="80"></img>
                 <h4 className="InvisionCta"> Ver prototipo en Invision </h4>
 
             </a>
@@ -161,9 +171,14 @@ const OxxoPage = ({ data }) => (
             <h1 className="PieceHeaderTitle">Interacción animada</h1>
         </GroupHeader>
         <MicroGroup>
-            <img width="400" src='https://dl.dropboxusercontent.com/s/rj2gbzftwrd55fh/oxxoanimation.gif?dl=0' />
+            <img alt="OXXO Animacion" width="400" src='https://dl.dropboxusercontent.com/s/rj2gbzftwrd55fh/oxxoanimation.gif?dl=0' />
 
         </MicroGroup>
+        <CaseStudy>
+            <p>
+                Este es un concepto interesante que e trabajó  para crear un glosario de calidad para smartphones pero que a diferencia de la web app, no fue desarrollado al final.
+            </p>
+        </CaseStudy>
         <ActionContainer>
             <MainBtnNoBorder href="/cotiza" >Cotiza Ya</MainBtnNoBorder>
         </ActionContainer>

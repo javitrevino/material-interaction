@@ -9,6 +9,7 @@ p{
     font-size: 21px;
     font-family:"Poppins";
     color: #595959;
+    line-height: 1.4;
 
 }
 
@@ -37,5 +38,14 @@ text-align: center;
 }
 }
 
+.UniversalAnchor {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
 
 
+.paragraphAnchor {
+    font-size: 21px;
+    font-weight: bold;
+}

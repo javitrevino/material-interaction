@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import "./HeaderAlternative.css";
+import "./ColoredHeader.scss";
 import styled from 'styled-components'
 
+/* eslint-disable */
+
 const QuoteBtn = styled.a` 
-color: white;
 background: linear-gradient(121deg, #015FDF, #1ED2FC);
 border-radius: 15px;
 font-size: 22px;
@@ -19,7 +20,7 @@ vertical-align: middle;
     }
 
 `
-class HeaderAlternative extends React.Component {
+class ColoredHeader extends React.Component {
 
     constructor(props) {
         super(props)
@@ -44,19 +45,19 @@ class HeaderAlternative extends React.Component {
         }
     }
 
-
     render() {
         return (
-            <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
+            <div className={this.state.hasScrolled ? 'ColoredHeader ColoredHeaderScrolled' : 'ColoredHeader'}>
                 <div className="HeaderGroup">
-                    <Link className="Logo" to="/"> <img src={require('../images/interaction-logo.png')} alt="Interaction" width="180"></img> </Link>
+                    <Link className="Logo" to="/"> <img src='https://dl.dropboxusercontent.com/s/1m4juxeq2z2jycd/interaction-logo.png?dl=0' alt="Interaction" width="180"></img> </Link>
                     <Link to="/servicios">Servicios</Link>
-                    <Link>Portfolio</Link>
-                    <QuoteBtn>Cotizar</QuoteBtn>
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/portfolio">Portfolio</Link>
+                    <QuoteBtn href="/cotiza">Cotizar</QuoteBtn>
                 </div>
             </div>
         )
     }
 }
 
-export default HeaderAlternative
+export default ColoredHeader

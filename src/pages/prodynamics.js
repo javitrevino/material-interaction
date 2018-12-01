@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-import Card from '../components/Card'
-import Section from '../components/Section';
-import Link from 'gatsby-link'
 import Wave from '../components/Wave'
 
 /* eslint-disable */
@@ -15,7 +12,7 @@ const ScreensGroup = styled.div`
  justify-items: center;
 
     justify-content: center;
-    margin-bottom: 120px;
+ 
 
     @media (max-width: 647px) {
         grid-template-columns: 1fr;
@@ -127,6 +124,15 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 `
 
+const CaseStudy = styled.div`
+       display: grid;
+    justify-content: center;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+`
+
 const ProdynamicsPage = ({ data }) => (
     <Layout>
         <div className="Hero">
@@ -149,12 +155,41 @@ const ProdynamicsPage = ({ data }) => (
         <ScreensGroup>
             <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/7587srq7x53nt3d/pro1.png?dl=0' />
             <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/773mta658f7csqi/pro2.png?dl=0' />
-            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/soz0xib05di7wlw/pro3.png?dl=0' />
-            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/faespzxzhv3cn3v/pro4.png?dl=0' />
-            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/me3sn1gf1zlcgir/pro5.png?dl=0' />
-            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/j49gz1melozo971/pro6.png?dl=0' />
+
      
         </ScreensGroup>
+        <CaseStudy>
+            <p>
+Android es una plataforma que requiere consideraciones especiales, en el caso de esta experiencia se requería pensar en las tablet Nexus que se usaría en las tiendas de Prodynamics
+            </p>
+        </CaseStudy>
+        <ScreensGroup>
+
+            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/soz0xib05di7wlw/pro3.png?dl=0' />
+            <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/faespzxzhv3cn3v/pro4.png?dl=0' />
+            
+
+        </ScreensGroup>
+        <CaseStudy>
+            <p>
+                Se trabajó pensando cuidadosamente en la experiencia del personal y de los clientes, procurando acera algo que fuera muy amigable, fácil de usar pero que luciera bien al mismo tiempo.ndroid es una plataforma que requiere consideraciones especiales, en el caso de esta experiencia se requería pensar en las tablet Nexus que se usaría en las tiendas de Prodynamics
+            </p>
+
+            <p>
+                El uso de pequeños detalles cómo ilustraciones y gráficos ayudan a mejorar la apariencia e impresión generada por una app.
+            </p>
+        </CaseStudy>
+        <ScreensGroup>
+        <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/me3sn1gf1zlcgir/pro5.png?dl=0' />
+        <img className="WideScreen" src='https://dl.dropboxusercontent.com/s/j49gz1melozo971/pro6.png?dl=0' />
+     
+        </ScreensGroup>
+        <CaseStudy>
+            <p>
+                Para el diseño visual nos inspiramos en la especificación de Material Design de Google. Tiene una coherencia natural con Android y contiene patrones de diseño que son familiares, fáciles entender para la actividad comercial para la cual esta app fue planeada. 
+
+            </p>
+        </CaseStudy>
 
 
         <ViewPrototype>

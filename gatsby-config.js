@@ -5,6 +5,7 @@ module.exports = {
     keywords: 'prototipos monterrey, diseño UI Monterrey, agencia UX Monterrey, Framer Monterrey, Sketch UI Monterrey, Diseño UX Monterrey, Origami Studio Monterrey, Interfaces Monterrey, Ux Mexico, UI Mexico, Framer Mexico, Prototipos Agencia, Prototipos Mexico'
   },
   plugins: [
+    'gatsby-plugin-sass',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     {
@@ -12,7 +13,6 @@ module.exports = {
       options: {
         space: 'v02i0eq7jigg',
         accessToken: '93868da459019911804ccffca88856ead99fad529c08f75181c4f6d1c7443d30',
-
       },
     }
   ],

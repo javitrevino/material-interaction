@@ -469,11 +469,20 @@ textarea {
     }
 }
 
-/* samsung phone */
+
+@media (min-width: 800px){
+    .FullWidthElement{
+    width: 100%;
+}
+
+p.CompanyField {
+    width: 100%;
+    display: grid;
+    justify-content: center;}
 
 
 
-
+}
 
 
 

@@ -7,18 +7,27 @@ import staticdata from "../../staticdata.json";
 import Wave from "../components/Wave";
 import "../components/Services.css";
 import Fab from "../components/Fab";
-import posed from "react-pose";
-import Card from '../components/Card'
+import '../components/Blog.scss'
+import { graphql } from 'gatsby'
+
 
 /* eslint-disable */
 
 const BlogPost = ({ node }) => {
   return (
-    <li>
-      <a href={node.slug}>{node.title}</a>
-      <img src={node.image.file.url}></img>
-      <div> {node.content.childMarkdownRemark.excerpt}</div>
-    </li>
+    <a href={node.slug}>
+      <div className="blogPost">
+        <img alt="Blog Image" src={node.image.file.url}></img>
+        <h1 >{node.title}</h1>
+        <p className="Excerpt">{node.content.childMarkdownRemark.excerpt}</p>
+        <div>
+          <p className="Author">INTERACTION</p>
+          <p className="Date">{node.date}</p>
+        </div>
+      </div>
+    </a>
+
+
   )
 }
 
@@ -302,13 +311,12 @@ const IndexPage = ({ data }) => (
   <Layout>
     <div className="Hero">
       <div className="HeroGroup">
-        <h1 className="HeroTitle">Diseñamos Apps</h1>
+        <h1 className="HeroTitle">Prototipos de software</h1>
         <p className="HeroParagraph">
-          Interaction asiste a las empresas de software en el diseño de
-          pantallas, prototipos y developer handoff para ayudarles a crear apps
-          increíbles. Nuestro propio método llamado Diseño Universal combina lo
-          mejor del Diseño UI/UX y el Design Thinking para crear algo más
-          efectivo.
+          Interaction es la primera empresa de prototipos de software en México.
+           Ayudamos a las empresas a definir su
+            visión, ahorrar recursos y a diseñar apps grandiosas. Nuestro propio método llamado <a class="UniversalAnchor" href="/universal">Diseño Universal</a> combina lo
+mejor del Diseño UI/UX y el Design Thinking.
         </p>
         <BtnGroup>
           <MainBtn href="/portfolio/">Ver Portfolio</MainBtn>
@@ -320,19 +328,21 @@ const IndexPage = ({ data }) => (
 
     <InteractionSection>
       <BenefitsArea>
+
         <GifWrapper>
           <Gif image="https://dl.dropboxusercontent.com/s/ocg1wtid1ejwzdp/cards_UI.gif?dl=0" />
         </GifWrapper>
         <Benefit>
           <div>
-            <BenefitTitle>Enfoque Moderno</BenefitTitle>
-            <BenefitSubTitle>Estética, Funcionalidad y Emoción</BenefitSubTitle>
+            <BenefitTitle>Interfaces Modernas</BenefitTitle>
+            <BenefitSubTitle>Belleza Estética y Funcionalidad</BenefitSubTitle>
             <BenefitsParagraph>
               Nuestro workflow basado en vectores con apps como Sketch permite
-              diseñar muchos wireframes para explorar todas las posibilidades en
-              poco tiempo y después basado en las conclusiones crear diseños
-              visuales refinados con perfección por píxel que lucen como una app
-              terminada.
+              diseñar pantallas de alta calidad  y explorar las posibilidades creativas de tu producto. Sketch nos permite diseñar UIs que lucen como una app
+
+              terminada e integrar esos diseños con apps de prototipos.
+
+
             </BenefitsParagraph>
           </div>
         </Benefit>
@@ -340,14 +350,14 @@ const IndexPage = ({ data }) => (
       <BenefitsAreaReversed>
         <div>
           <BenefitTitle>Visión Clara</BenefitTitle>
-          <BenefitSubTitle> Diseña antes de desarrollar </BenefitSubTitle>
+          <BenefitSubTitle> Prototipa antes de desarrollar </BenefitSubTitle>
           <BenefitsParagraph>
-            Interaction te da la habilidad de tomar los diseños UI y darles vida.
-            Puedes elegir desde algo simple pero poderoso como un prototipo
-            online en Invision, o algo más ambicioso como animaciones o
-            prototipos avanzados. El objetivo es que puedas envisionar en
+            Interaction te da la habilidad de tomar los diseños UI de Sketch y darles vida.
+            Puedes elegir desde algo simple como un prototipo
+            online en Invision, o algo más ambicioso como animaciones de Principle o
+            prototipos avanzados de React. El objetivo es que puedas envisionar en
             grande, presentar tu proyecto a tu equipo o socios y tener claridad
-            en la dirección que lleva tu proyecto.
+            en la dirección que lleva tu proyecto mientras ahorras recursos.
           </BenefitsParagraph>
         </div>
         <GifWrapper>
@@ -360,14 +370,13 @@ const IndexPage = ({ data }) => (
         </GifWrapper>
         <Benefit>
           <div>
-            <BenefitTitle>Microinteractions</BenefitTitle>
-            <BenefitSubTitle> Interfaces mágicas</BenefitSubTitle>
+            <BenefitTitle>Interfaces mágicas</BenefitTitle>
+            <BenefitSubTitle>Prototipos Animados Precisos</BenefitSubTitle>
             <BenefitsParagraph>
-              Llamamos interfaces mágicas a aquellas que tiene una sublime
-              animación que deleita a los usuarios. Por medio de herramientas
-              como Flinto y Principle se pueden diseñar Gifs y videos animados
-              que muestran las transiciones de tu app de forma dinámica. En
-              prototipos de Framer X, se pueden usar librerías como Popmotion.
+              Interaction tiene un enfoque fuerte en la animación de UIs para apps.
+              Consideramos que la animación es más que un adorno, es una parte importante del UX.
+              Desde microinteractions hechas en Principle hasta Prototipos de iOS en Flinto, Interaction
+              te ayudará a crear prototipos pixel perfect al nivel de Dribbble.
             </BenefitsParagraph>
           </div>
         </Benefit>
@@ -375,13 +384,10 @@ const IndexPage = ({ data }) => (
       <BenefitsAreaReversed>
         <div>
           <BenefitTitle>Dev Friendly</BenefitTitle>
-          <BenefitSubTitle>Especificaciones de desarrollo</BenefitSubTitle>
+          <BenefitSubTitle>Code Meets Design</BenefitSubTitle>
           <BenefitsParagraph>
-            Interaction diseña dentro los límites de las plataformas de
-            tecnología, nuestro trabajo es fácil de trasladar a código.
-            Entregamos un developer handoff, es decir por medio de apps como
-            Invision Inspect entregamos todos los detalles importantes para ser
-            usados por desarrolladores para implementar el diseño
+            En Interaction somos verdaderos diseñadores de productos de tecnología. Es por eso que nuestro proceso siempre
+            tiene una fase de entrega de specs para desarrollo (developer handoff). Esto puede tomar varias formas como el uso de apps como Zeplin e Invision Inspect o bien el uso de componentes reales de React en Framer X.
           </BenefitsParagraph>
         </div>
         <GifWrapper>
@@ -403,19 +409,62 @@ const IndexPage = ({ data }) => (
         <SpecialBtn href="/cotiza">Cotiza Hoy</SpecialBtn>
       </ActionContainer>
 
+      <section className="blogArea">
+        <SectionCaption>Blog de Interaction</SectionCaption>
+        <div className="blogGroup">
 
-    </InteractionSection>
+          {data.allContentfulBlog.edges.map((edge) => <BlogPost node={edge.node} />)}
+        </div>
+
+      </section>
+
+    </InteractionSection >
     <Fab />
-  </Layout>
+  </Layout >
 );
 
 export default IndexPage;
+/*
+
+Query de GraphQL para Beneficios. Esta muy dificil de hacer ahorita debido a los componentes a la reversa.
+Se tendra que editar desde el codigo de Gatsby por ahora para optimiza el tiempo.
+{
+  allContentfulBenefit {
+    edges {
+      node {
+
+        benefitImage {
+          file {
+            url
+
+          }
+        }
+       benefitTitle
+        benefitSubtitle
+      	benefitBody {
+      	  childMarkdownRemark {
+              html
+            }
+      	}
+
+
+
+
+      }
+    }
+  }
+}
+
+*/
+
 
 export const pageQuery = graphql`
   query pageQuery {
-    allContentfulBlog (filter: {
-      node_locale: { eq: "en-US"}
-    }){
+    allContentfulBlog (
+      filter: { node_locale: { eq: "en-US"}}, 
+      sort: { fields: [date], order: DESC},
+      limit: 3
+    ){
       edges {
         node{
           title
@@ -430,6 +479,7 @@ export const pageQuery = graphql`
               url
             }
           }
+        date(formatString: "YYYY/DD/MM ")
         }
       }
     }

@@ -5,10 +5,7 @@ import "../components/layout.css";
 import Wave from "../components/Wave";
 import Fab from "../components/Fab";
 
-const FormContainer = styled.div`
-  display: grid;
-  margin: 40px;
-`;
+
 const MainBtn = styled.button`
   cursor: pointer;
   background: linear-gradient(125deg, #015fdf, #1ed2fc);
@@ -50,6 +47,17 @@ const FormGroup = styled.div`
   display: grid;
   align-content: center;
 `;
+
+const HorizontalGroup = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media ( max-width: 800px){
+    grid-template-columns: 1fr;
+  }
+ `
+
+
 
 const ContactPage = ({ data }) => (
   <Layout>
@@ -160,27 +168,32 @@ const ContactPage = ({ data }) => (
         action="/success"
       >
         <input type="hidden" name="form-name" value="cotizaciones" />
-        <p>
-          <label>
-            Nombre
+        <HorizontalGroup>
+          <p className="NameField">
+            <label>
+              Nombre
             <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Empresa
+            </label>
+          </p>
+          <p className="CompanyField">
+            <label>
+              Empresa
             <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Email <input type="email" name="email" />
-          </label>
-        </p>
+            </label>
+          </p>
+        </HorizontalGroup>
+        <div id="iggy">
+          <p>
+            <label>
+              Email
+            </label>
+            <input className="FullWidthElement" type="email" name="email" />
+          </p>
+        </div>
 
         <p>
           <label>
-            Mensaje <textarea name="message" />
+            Mensaje <textarea className="FullWidthElement" name="message" />
           </label>
         </p>
         <p class="FormBtnWrapr">

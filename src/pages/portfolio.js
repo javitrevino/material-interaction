@@ -1,52 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import Layout from "../components/layout";
 import Card from "../components/Card";
-import Section from "../components/Section";
 import Link from "gatsby-link";
-import Cell from "../components/Cell";
-
-import staticdata from "../../staticdata.json";
 import Fab from "../components/Fab";
 import Wave from "../components/Wave";
 
-const CardsGroup = styled.div`
-  display: grid;
-`;
-
-const SectionCaption = styled.h1`
-  font-weight: 200;
-  font-size: 32px;
-  color: #717e90;
-  font-weight: 600;
-  font-family: "Poppins";
-  text-align: center;
-  margin-bottom: 90px;
-
-  @media (max-width: 640px) {
-    font-size: 26px;
-  }
-`;
-
-const ToolsContainer = styled.div`
-  background: #fefefe;
-  margin: 200px;
-  display: grid;
-  justify-content: center;
-`;
-
-const SectionCellGroup = styled.div`
-  margin: 0 auto 100px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  padding: 0 20px;
-
-  @media (max-width: 800px) {
-    grid-template-columns: auto;
-    justify-content: center;
-  }
-`;
 
 const PortfolioPage = ({ data }) => (
   <Layout>

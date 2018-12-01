@@ -51,6 +51,7 @@ class Header extends React.Component {
         <div className="HeaderGroup">
           <Link className="Logo" to="/"> <img src='https://dl.dropboxusercontent.com/s/1m4juxeq2z2jycd/interaction-logo.png?dl=0' alt="Interaction" width="180"></img> </Link>
           <Link to="/servicios">Servicios</Link>
+          <Link to="/blog">Blog</Link>
           <Link to="/portfolio">Portfolio</Link>
           <QuoteBtn href="/cotiza">Cotizar</QuoteBtn>
         </div>

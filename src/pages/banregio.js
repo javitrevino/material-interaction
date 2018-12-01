@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-import Card from '../components/Card'
-import Section from '../components/Section';
-import Link from 'gatsby-link'
 import Wave from '../components/Wave'
 
 /* eslint-disable */
@@ -15,7 +12,7 @@ const ScreensGroup = styled.div`
  justify-items: center;
 
     justify-content: center;
-    margin-bottom: 120px;
+
 
     @media (max-width: 647px) {
         grid-template-columns: 1fr;
@@ -44,7 +41,7 @@ const MicroGroup = styled.div`
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-bottom: 112px;
+
     justify-items: center;
     @media (max-width: 647px) {
         grid-template-columns: 1fr;
@@ -138,6 +135,19 @@ transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
 `
 
+const CaseStudy = styled.div`
+       display: grid;
+    justify-content: center;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+`
+
+const Separator = styled.div`
+height: 6rem;
+ `
+
 const BanregioPage = ({ data }) => (
     <Layout>
         <div className="Hero">
@@ -161,12 +171,38 @@ const BanregioPage = ({ data }) => (
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/n2hy5v0oydah8eo/ban1.png?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/vcfvnxqbicrktxw/ban2.png?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/sw44hirgxle9eo3/ban3.png?dl=0' />
+
+
+        </ScreensGroup>
+        <CaseStudy>
+            <p>
+                Tuvimos la oportunidad de crear una interfaz de usuario simple y poderosa que da énfasis a los beneficios de Banregio Automotriz. El uso de colores corporativos e iconos de linea deja que el contenido hable por sí mismo para que los clientes puedan interactuar con los servicios.
+            </p>
+        </CaseStudy>
+        <ScreensGroup>
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/0nyc7lu8f6av20k/ban4.png?dl=0' />
-            <img className="Screen" src='https://dl.dropboxusercontent.com/s/z8b1j39t2madbit/ban5.png?dl=0' />
-            <img className="Screen" src='https://dl.dropboxusercontent.com/s/8xupi8lg4710q3b/ban6.png?dl=0' />
+
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/g013b1s0bx9ku9u/ban7.png?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/02wu08m5uar6ie5/ban8.png?dl=0' />
         </ScreensGroup>
+        <CaseStudy>
+            <p>
+                El uso de patrones de diseño estándar nos permite crear una experiencia de usuario que es predecible e intuitiva para los consumidore,de tal manera que no tienen que investigar cómo se utiliza el producto.
+
+            </p>
+        </CaseStudy>
+        <ScreensGroup>
+            <img className="Screen" src='https://dl.dropboxusercontent.com/s/z8b1j39t2madbit/ban5.png?dl=0' />
+            <img className="Screen" src='https://dl.dropboxusercontent.com/s/8xupi8lg4710q3b/ban6.png?dl=0' />
+
+        </ScreensGroup>
+        <CaseStudy>
+
+            <p>
+                Ligeros detalles de diseño y una navegación evidente en la interfaz de usuario nos permiten crear algo que a primera vista parece simple pero en realidad es una solución bien planeada para mayor satisfacción de clientes.
+
+            </p>
+        </CaseStudy>
 
         <ViewPrototype>
             <a className="AnchorInvisionWrapper" href="https://invis.io/VWOSAKT8XRH" target="_blank">
@@ -184,6 +220,11 @@ const BanregioPage = ({ data }) => (
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/zz8lrhi14ddy6k0/banGif2.gif?dl=0' />
             <img className="Screen" src='https://dl.dropboxusercontent.com/s/ak8t1drgweffhpm/banGif1.gif?dl=0' />
         </MicroGroup>
+        <CaseStudy>
+            <p>
+                La creación de micro-interacciones en el UI nos permitió crear un sistema de navegación adecuada para la búsqueda de talleres asociados con la compañía. Haciendo así que el servicio de atención en el camino funcionara de maravilla.
+            </p>
+        </CaseStudy>
         <ActionContainer>
             <MainBtnNoBorder href="/cotiza" >Cotiza Ya</MainBtnNoBorder>
         </ActionContainer>

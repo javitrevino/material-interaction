@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/layout";
-import Gif from "../components/Gif";
 import styled from "styled-components";
 import "../components/Services.css";
 import Fab from "../components/Fab";
@@ -160,13 +159,10 @@ const ServicesPage = ({ data }) => (
   <Layout>
     <div className="Hero">
       <div className="HeroGroup">
-        <h1 className="HeroTitle">Diseño Universal</h1>
+        <h1 className="HeroTitle">Prototipos de Sketch</h1>
         <p className="HeroParagraph">
-          Somos un grupo de diseñadores de Monterrey con la misión de apoyar a las empresas de software
-          de México a que tengan un gran diseño en sus apps.
-          En Interaction, creamos nuestro propio método de trabajo: se llama
-              Diseño Universal. Toma elementos del diseño UI, UX y el Design
-              Thinking para crear algo mucho más efectivo. Estos son los 4 pilares.
+
+          El servicio consiste en diseñar la faceta de UI/UX de tu app en Sketch y de ahí crear 1 o 2 prototipos según tu preferencia. Es con la finalidad de que seas mas exitoso en tu negocio de software, ya que tener un prototipo y diseños UI de tu app te ayudará a ser más productivo y hacer más felices a tus clientes.
         </p>
       </div>
       <Wave />
@@ -174,8 +170,8 @@ const ServicesPage = ({ data }) => (
 
     <InteractionServicesSection>
       <ExamplesText>
-        <ServiceTitle>Producción Visual</ServiceTitle>
-        <BenefitSubTitle>Diseño de pantallas</BenefitSubTitle>
+        <ServiceTitle>Diseño de pantallas</ServiceTitle>
+        <BenefitSubTitle>Diseño UI/UX en Sketch</BenefitSubTitle>
 
         <ToolsLabel>Herramientas relevantes</ToolsLabel>
         <ToolsLogos>
@@ -203,16 +199,16 @@ const ServicesPage = ({ data }) => (
         </ToolsLogos>
 
         <p>
-          Las herramientas modernas como Sketch o Figma, nos permiten diseñar
-          muchas pantallas fácilmente. Gracias a esto se lleva a cabo una fase
-          inicial donde se crean todos los wireframes necesarios para tener una
-          visión clara de la app, se llena con contenidos realistas y se le
-          añade la navegación, de la forma que desde el principio se tiene algo
-          muy completo donde se pueden rebotar ideas y moldear el proyecto.
-          Después se toma este borrador bien definido y se convierten en diseños
-          de pantalla estilizados (UI mockups) que lucen como una app terminada,
-          esto permite prácticamente ver justo como seria tu app antes de
-          desarrollar nada todavía.
+          Después de haber hecho un análisis serio de tu proyecto nos valemos de herramientas como Sketch o Figma, que nos permiten diseñar
+                pantallas de alta calidad. Se lleva a cabo una fase
+                inicial donde se crean todos los wireframes necesarios para tener una
+                visión clara de la app, se llena con contenidos realistas y se le
+                añade la navegación, de tal forma que desde el principio se tiene algo
+                muy completo donde se pueden rebotar ideas y moldear el proyecto.
+                Después se toma este borrador bien definido y se convierten en diseños
+                de pantalla estilizados (UI mockups) que lucen como una app terminada,
+                esto permite prácticamente ver justo como seria tu app antes de
+                desarrollar nada todavía.
         </p>
       </ExamplesText>
       <ExamplesGroup>
@@ -232,8 +228,8 @@ const ServicesPage = ({ data }) => (
     </InteractionServicesSection>
     <InteractionServicesSection>
       <ExamplesText>
-        <ServiceTitle> Design Demo </ServiceTitle>
-        <BenefitSubTitle>Prototipos Online</BenefitSubTitle>
+        <ServiceTitle> Prototipo Online</ServiceTitle>
+        <BenefitSubTitle>Proyecto de Invision</BenefitSubTitle>
         <ToolsLabel>Herramientas relevantes</ToolsLabel>
         <ToolsLogos>
           <div className="AppBlock">
@@ -253,13 +249,7 @@ const ServicesPage = ({ data }) => (
         </ToolsLogos>
 
         <p>
-          Tomamos las pantallas diseñadas típicamente en Sketch ( ó Invision
-          Studio ) y las convertimos en un prototipo interactivo que se puede
-          ver desde desde tu smartphone o de tu navegador web para presentarlo a
-          tu equipo o gente involucrada en el proyecto. De esta manera la fase
-          de Feedback Colaborativo permite al equipo visualizar y planear de
-          acuerdo al gran avance que se tiene en este punto, tenemos listo el
-          diseño y la navegación, lo cual no es poca cosa.
+          Tomamos las pantallas diseñadas típicamente en Sketch ( ó Figma) y las convertimos en un prototipo interactivo que se puede ver desde desde tu smartphone o de tu navegador web para presentarlo a tu equipo o gente involucrada en el proyecto. De esta manera la fase de feedback colaborativo permite al equipo visualizar y planear de acuerdo al gran avance que se tiene en este punto.
         </p>
       </ExamplesText>
       <ExamplesGroup>
@@ -284,8 +274,8 @@ const ServicesPage = ({ data }) => (
     </InteractionServicesSection>
     <InteractionServicesSection>
       <ExamplesText>
-        <ServiceTitle> Interfaces Mágicas</ServiceTitle>
-        <BenefitSubTitle>Interacciones Animadas</BenefitSubTitle>
+        <ServiceTitle>Prototipo Animado</ServiceTitle>
+        <BenefitSubTitle>Microinteracciones + Alta Fidelidad </BenefitSubTitle>
 
         <ToolsLabel>Herramientas relevantes</ToolsLabel>
 
@@ -306,18 +296,13 @@ const ServicesPage = ({ data }) => (
           </div>
         </ToolsLogos>
         <p>
-          Las interacciones táctiles ó "microinteractions" son un elemento
-          importante en apps menos convencionales. Con herramientas como
-          Principle y Flinto podemos hacer mini-prototipos que pueden ser
-          utilizados en iPhone o visualizados en GIFs o videos de alta fidelidad
-          que muestran interacciones únicas enfocadas a los eventos de la
-          pantalla táctil de los smartphones como swipe, tap y pinch, entre
-          otros. Las microinteractions son muy populares en sitios como Dribbble
-          y en apps modernas del Silicon Valley, ya que deleitan a los usuarios
-          y hacen que la app se sienta moderna y le da el toque humano. No sólo
-          eso si no que la animación puede dar feedback importante para guiar a
-          los usuarios de lo que ocurre en la app.
-        </p>
+        Si quieres llevar el diseño de tu app al siguiente nivel, 
+        lo que sigue seria crear dos entregables extra: una <a className="paragraphAnchor" href="/microinteracciones">serie de animaciones ó 
+        micro-eventos </a>que llevaría tu app (realizadas en la aplicación de Mac llamada
+         Principle) y un prototipo navegable de iOS también con animaciones pero mucho más cercano al producto final que puedes correr en tu iPhone o Mac (realizado en la app Flinto).
+  
+  Esta solución es para quienes admiran plataformas como Dribbble o Uplabs y quieren diseñar su app con ese nivel de sofisticación  visual y animada.
+  </p>
       </ExamplesText>
       <ExamplesGroup>
         <div>
@@ -348,8 +333,8 @@ const ServicesPage = ({ data }) => (
     </InteractionServicesSection>
     <InteractionServicesSection>
       <ExamplesText>
-        <ServiceTitle>ProtoScript </ServiceTitle>
-        <BenefitSubTitle>Prototipos Avanzados</BenefitSubTitle>
+        <ServiceTitle> Prototipo Premium </ServiceTitle>
+        <BenefitSubTitle>Codificado en React/Framer X</BenefitSubTitle>
 
         <ToolsLabel>Herramientas relevantes</ToolsLabel>
 
@@ -370,18 +355,19 @@ const ServicesPage = ({ data }) => (
           </div>
         </ToolsLogos>
         <p>
-          Para los usuarios que usan React, existe la opción de utilizar la
-          herramienta de vanguardia Framer X, la cual no solo permite generar
-          prototipos de la más alta fidelidad si no que también genera
-          componentes de código en React que pueden ser utilizados como
-          referencia para los equipos que utilizan React Native, ó directamente
-          en el proyecto si utilizan React.js para web o Cordova. Incluso si tu
+          Este tipo de prototipo es el más avanzado de todos y es recomendado
+          para los clientes que quieren tener un prototipo hyperrealista de su idea o su proyecto.
+          Seria creado con Framer X, TypeScript y React, partes de el prototipo pueden ser utilizadas en
+          un proyecto de React, lo cual le añade mucho valor.
+      </p>
+        <p>
+          Incluso si tu
           compañía usa una tecnología diferente a React, Framer X es la mejor
           opción para generar un prototipo de la más alta fidelidad que incluye
           inputs de texto, lógica y todas las interacciones completas de tu app,
           lo cual lo hace casi indistinguible de una app ya codificada para
-          motivos de presentación y diseño de producto más sofisticado.
-        </p>
+          motivos de presentación y diseño de producto.
+     </p>
       </ExamplesText>
       <ExamplesGroup>
         <div>
