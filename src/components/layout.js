@@ -6,7 +6,6 @@ import Header from './header'
 import './layout.css'
 import Footer from '../components/Footer'
 import icon32 from '../images/interaction_favicon.png'
-import opengraph from '../images/interaction_opengraph.png'
 
 /* eslint-disable */
 
@@ -20,7 +19,6 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             description
-            keywords
           }
         }
          allContentfulLink(sort: { fields: [createdAt], order: ASC }) {
@@ -48,9 +46,7 @@ const Layout = ({ children }) => (
               name: 'keywords', content:
                 data.site.siteMetadata.keywords
             },
-            {
-              property: 'og:image', content: `${opengraph}`
-            },
+
             {
               name: 'google-site-verification', content: 'SEngJ_JiEvHgHy-V6ZMLbG2kaH-EfKQxJGoQ7WJBICo'
             }
