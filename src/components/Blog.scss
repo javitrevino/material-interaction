@@ -1,0 +1,163 @@
+
+.blogArea{
+    padding-top: 140px;
+}
+
+.blogGroup {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+    img {
+        width: 100%;
+    }
+
+    .Excerpt {
+        font-size: 17px;
+    }
+
+    .Author{
+        color: gray;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .Date{
+        color: slategray;
+        font-size: 14px;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+.blogPost{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    margin: 70px 40px;
+    box-shadow: 0px 4px 12px 3px rgba(190, 190, 190, 0.2);
+
+    h1 {
+        font-size: 25px;
+    }
+
+     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+   
+
+     &:hover{
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 20px 30px rgba(0,0,0, 0.1);
+     }
+
+}
+
+
+@media only screen and (max-width: 900px){ 
+.blogGroup {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr; 
+    }
+}
+
+/* Article Page */
+
+.Article{
+
+
+    padding: 4rem;
+
+    a{
+        
+        font-size: 21px;
+    }
+
+    h1{
+        font-size: 3em;
+        font-weight: 300;
+        padding: 0.3em;
+        text-align: center;
+    }
+
+ div {
+       font-size: 17px;
+       font-weight: 300;
+    }
+
+    img{
+        width: 30rem;
+        box-shadow: 1px 1px 3px 3px #f3f3f3;
+    }
+
+    p{
+        margin-bottom: 3rem;
+line-height: 1.4;
+
+    }
+
+    ul{
+        margin: 5rem;
+        li{
+                margin: 17px;
+    font-size: 21px;
+    font-family: "Poppins";
+    color: #595959;
+    line-height: 1.4;
+    text-decoration:none;
+    
+    margin: 2rem;
+        }
+    }
+
+    h2{
+        margin: 3rem;
+    font-size: 40px;
+        text-align: center;
+    }
+}
+
+.BlogImageGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 7rem;
+
+  
+}
+
+.BlogWelcome{
+    padding: 100px;
+
+    h1{
+        font-size: 48px;
+        font-weight: 200;
+        padding: 16px;
+    }
+}
+
+.BlogCaption {
+    text-align: center;
+    font-size: 1.3rem;
+    
+}
+
+.CaptionContainer {
+margin-bottom: 7rem;
+}
+ 
+ .separator{
+    height: 2rem;
+ }
+
+ .SingleImageContainer {
+    display: grid;
+    justify-content: center;
+}
+
+.VidContainer {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    display: grid;
+    justify-content: center;
+}
+.videoItem {
+    width: 400px;
+}

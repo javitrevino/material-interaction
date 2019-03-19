@@ -1,0 +1,108 @@
+.Card {
+    width: 380px;
+    height: 325px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0, 0.25);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (max-width: 720px) {
+    .Card {
+
+     width: 360px;
+    height: 325px;
+    }
+}
+
+.Card:hover{
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0,0,0, 0.5);
+}
+
+.Card:hover img {
+    transform: translateY(-20px);
+}
+
+.Card img{
+    position: absolute;
+    top: 0;
+    height: 110%;
+    z-index: -1;
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    
+}
+
+
+
+.Card h3{
+    color: white;
+    font-size: 30px;
+    margin: 20px 0 0 20px;
+    width: 190px;
+}
+
+.Card p {
+    color: rgba(255,255,255, 0.8);
+    font-weight: 600;
+    font-size: 18px;
+    align-self: end;
+    margin: 0 0 20px 20px;
+}
+
+.Cards{
+    margin-top: 104px;
+}
+
+.Cards h2{
+    margin: 40px 20px 80px;
+    font-size: 40px;
+    font-weight: 200;
+     text-align: center;
+
+}
+
+@media  (max-width: 700px){
+    .Cards h2{
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.CardGroup {
+    margin: 70px 170px 200px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 80px;
+    justify-items: center;
+}
+
+@media (max-width: 1060px) {
+    .CardGroup{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .CardGroup {
+    grid-template-columns: auto;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+   {
+      .CardGroup {
+    margin: 30px 20px 200px;
+    }
+
+     
+
+}

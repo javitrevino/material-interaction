@@ -1,0 +1,51 @@
+.AppBlock {
+    display: grid;
+justify-items: center;
+ 
+}
+
+p{
+    margin: 17px;
+    font-size: 21px;
+    font-family:"Poppins";
+    color: #595959;
+    line-height: 1.4;
+
+}
+
+.AppBlock p {
+    font-size: 17px;
+    font-weight: 200;
+text-align: center;
+}
+
+.UnevenExample {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 80px;
+    justify-items: center;
+}
+
+.ExamplesGroup div 
+{
+        display: grid;
+    justify-items: center;
+}
+
+@media (max-width: 640px) {
+    .UnevenExample {
+    display: none;
+}
+}
+
+.UniversalAnchor {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.paragraphAnchor {
+    font-size: 21px;
+    font-weight: bold;
+}
